@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,14 +11,111 @@
 
 <body>
   <!-- BODY  -->
+
   <!-- HEADER -->
   <header>
     <h1 id="title">AJ's Survey Form</h1>
   </header>
-  <!-- END OF HEADER --> 
+  <!-- END OF HEADER -->
+  <br>
   <div id="description-container">
     <p id="description"> Thank you for completing the Survey Form!</p>
-    </div>
+  </div>
+  <br>
+  <hr>
+  <!-- FORM  -->
+  <form id="survey-form" action="/submit form" method="post">
+    <fieldset>
+      <label id="name-label" for="name"> Enter your name: </label>
+      <input id="name" name="name" type="text" required placeholder="John Doe"/>
+      <br>
+      <br>
+      <label id="email-label" for="email"> Enter your email: </label>
+      <input id="email" name="email" type="email" required placeholder="somebody@yahoo.com"/>
+      <br>
+      <br>
+      <label id="number-label" for="age" class="optional"> Enter your age: (Optional) </label>
+      <input id="number" name="age" type="number" min="0" max="120" placeholder="1"/>
+      <br>
+      <br>
+      <label id="password" for="password" class="required">
+        Enter your Password (required):
+        <input id="password" name="password" type="password" pattern="[a-z0-5]{8,a" required>
+      </label>
+    </fieldset>
+
+    <!-- INSERT DIV to remove spacing here -->
+    <fieldset>
+      <legend> Account type (required) </legend>
+      <label for="personal-account">
+        <input id="personal-account" type="radio"  value="personal-account" name="account-type" class="inline" checked />
+          Personal</label>
+      <label for="business-account">
+        <input id="business-account" type="radio" value="business-acount" name="account-type" class="inline"  />
+          Business </label>
+
+    </fieldset>
+    <!-- how did you hear about us  -->
+    <fieldset>
+      <label for="referrer"> How did you hear about us? <br>
+        <select id="dropdown" name="referrer">
+          <option value="0"> (select one) </option>
+          <option value="1"> E-mail </option>
+          <option value="2"> Social Media  </option>
+          <option value="3"> Word of Mouth  </option>
+          <option value="4"> Referral </option>
+          <option value="5"> Other </option>
+          </select>
+      </label>
+    </fieldset>
+    <fieldset>
+      <legend> What Services are you interested in? </legend>
+      <label for="email-services">
+        <input type="checkbox" value="email-services" checked>
+        Email-Services
+        </label>
+      <label for="Web Development">
+        <input type="checkbox" value="web-development">
+        Web Development
+        </label>
+      <label for="AI / Automation Consulting">
+        <input type="checkbox" value="AI" >
+        AI / Automation Consulting
+        </label>
+      <label for="Reports / Dashboards">
+        <input type="checkbox" value="reports-dashboards">
+        Reports / Dashboards 
+        </label>
+    </fieldset>
+
+    <fieldset>
+
+      <label for="comments"> Any additional comments? 
+        <textarea id="comments" name="comments" rows="3" cols="30" placeholder="Lorem Ipsem">
+          </textarea>
+      </label>
+
+    </fieldset>
+    <fieldset>
+      <legend> Accept and Submit </legend>
+
+      <label for="terms-and-conditions">
+    <input class="inline" id="terms-and-conditions" value="terms-and-conditions" type="checkbox" required name="terms-and-conditions" />
+  
+  I accept the
+        <a href="https://www.freecodecamp.org/news/terms-of-service/"
+          >terms and conditions</a
+        >
+      </label>
+
+      <input id="submit" type="submit" value="Submit" />
+
+    </fieldset>
+
+
+    <!-- END OF FORM -->
+  </form>
+
 
 
 
