@@ -13,7 +13,7 @@ body {
     font-size: 1 rem;
   }
   
-  h1 {
+h1 {
     text-align: center;
     color: #f3f3f3;
     font-size: 1 rem;
@@ -21,6 +21,14 @@ body {
     line-height: 1.2;
     margin: 0;
   
+  }
+
+#description {
+    color: #f3f3f3;
+    font-style: italic;
+    text-align: center;
+    font-size: 0.5 rem;
+    font-weight: 200;
   }
   
   
